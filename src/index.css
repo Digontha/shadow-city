@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 21.6% 6%;
+    --foreground: 230 7.2% 96%;
+    --card: 230 24% 9.5%;
+    --card-foreground: 230 7.2% 96%;
+    --popover: 230 24% 9.5%;
+    --popover-foreground: 230 7.2% 96%;
+    --primary: 160 80% 54%;
+    --primary-foreground: 160 40% 9%;
+    --secondary: 230 24% 15%;
+    --secondary-foreground: 230 7.2% 94%;
+    --muted: 230 24% 14%;
+    --muted-foreground: 230 12.2% 66%;
+    --accent: 268 86% 68%;
+    --accent-foreground: 268 40% 9%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 30% 98%;
+    --border: 230 24% 18%;
+    --input: 230 24% 18%;
+    --ring: 160 80% 54%;
+    --primary-glow: 160 88% 68%;
+    --radius: 0.5rem;
+    --heading-tracking: -0.02em;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)), hsl(var(--card)));
+    --shadow-soft: 0 1px 2px hsl(var(--foreground) / 0.06), 0 6px 20px -6px hsl(var(--foreground) / 0.1);
+    --shadow-elegant: 0 12px 32px -12px hsl(var(--primary) / 0.35);
+    --shadow-glow: 0 0 44px hsl(var(--primary-glow) / 0.4);
+  }
+
+  .dark {
+    --background: 230 21.6% 6%;
+    --foreground: 230 7.2% 96%;
+    --card: 230 24% 9.5%;
+    --card-foreground: 230 7.2% 96%;
+    --popover: 230 24% 9.5%;
+    --popover-foreground: 230 7.2% 96%;
+    --primary: 160 80% 54%;
+    --primary-foreground: 160 40% 9%;
+    --secondary: 230 24% 15%;
+    --secondary-foreground: 230 7.2% 94%;
+    --muted: 230 24% 14%;
+    --muted-foreground: 230 12.2% 66%;
+    --accent: 268 86% 68%;
+    --accent-foreground: 268 40% 9%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 30% 98%;
+    --border: 230 24% 18%;
+    --input: 230 24% 18%;
+    --ring: 160 80% 54%;
+    --primary-glow: 160 88% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 1rem;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-foreground;
+    letter-spacing: var(--heading-tracking);
+    text-wrap: balance;
+  }
+  h1 {
+    font-size: clamp(2.25rem, 1.2rem + 3.6vw, 3.75rem);
+    line-height: 1.08;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.5rem);
+    line-height: 1.15;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: clamp(1.25rem, 1.05rem + 0.9vw, 1.5rem);
+    line-height: 1.25;
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.35;
+    font-weight: 600;
+  }
+  h5 {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  h6 {
+    font-size: 1rem;
+    line-height: 1.45;
+    font-weight: 600;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: hsl(var(--primary) / 0.2);
+  }
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
